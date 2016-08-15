@@ -12,6 +12,10 @@ a:focus {
   text-decoration: blink;
 }
 
+a {
+  color: #ffffff;
+}
+
 /* Layout */
 
 #app {

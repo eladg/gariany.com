@@ -20,12 +20,14 @@ class PostsItem extends React.Component {
     return (
       <div className="post post-table">
         <div className="post-row">
-          <div className="post-cell post-category post-category-js">{post.category}</div>
+          <div className="post-cell post-category post-category-js">
+            <a key={post.category} className="" href={'/#'+post.category}>{post.category}</a>
+          </div>
           <div className="post-cell post-details">
             <div className="post-table">
               <div className="post-row">
                 <div className="post-cell post-title">
-                  <a href={post.url}>{post.title}</a>
+                  <a href={post.url} target="_blank">{post.title}</a>
                 </div>
               </div>
 
@@ -60,13 +62,12 @@ class PostsList extends React.Component {
     
     var allPosts = this.props.posts.map(function(post) {
       return (
-        <PostsItem key={'post-' + post.id} post={post}
-        />
+        <PostsItem key={'post-' + post.id} post={post}/>
       );
     });
 
     return (
-      <div className="content col-xs-12 col-md-offset-3">
+      <div className="content col-xs-12 col-md-9 col-md-offset-3">
         <div className="all-posts">
           <div className="posts">
             {allPosts}

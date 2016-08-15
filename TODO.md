@@ -18,15 +18,11 @@ Design
 
 ## FEATURES
 
-* Clickable Categories
-* Bundle & Deployment
 * Webhooks to content
 * Source code button
 * Google Analytics
-* 
 
 ## CONTENT
 
 * Upload music to soundcloud.com
 * Publish vidit projects & sources to github.com
-* 
