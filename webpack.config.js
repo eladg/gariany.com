@@ -1,5 +1,6 @@
 // plugins
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const RobotsPlugin = require('@tanepiper/robots-webpack-plugin');
 
 module.exports = {
   devServer: {
@@ -54,9 +55,7 @@ module.exports = {
   },
 
   plugins: [ 
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'app/assets/index.ejs'
-    }),
+    new HtmlWebpackPlugin({ filename: 'index.html', template: 'app/assets/index.ejs'}),
+    new RobotsPlugin(),
   ]
 }
