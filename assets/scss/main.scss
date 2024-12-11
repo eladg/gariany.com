@@ -1,0 +1,12 @@
+// this file will compile into a 'site.css' file containing the site's design
+
+// ============================== GLOBAL VARIABLES ==============================
+$background-color: #bbbbbb;
+$background-color-dark: #aaaaaa;
+
+$text-color: #ffffff;
+$text-warning: #ffaa00;
+$text-important: #aa00ff;
+$text-code: #aaaacc;
+
+@import '_article', '_layout';

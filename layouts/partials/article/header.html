@@ -1,0 +1,21 @@
+{{ if isset .Params "is_site_static_page" }}
+{{ else }}
+  <div class="posts-list-item-description" style=" border-bottom: 1px solid;
+  display: flex;">
+    <span>
+      {{ partial "icons/date_clock_icon.html" }} {{ .Date.Format "January 2, 2006" }} &nbsp;
+    </span>
+
+    <span style="text-align: right;">
+      {{ partial "icons/align_left_icon.html" }}
+
+      {{ if gt .ReadingTime 1}}
+        {{ .ReadingTime }} minutes
+      {{ else }}
+        {{ .ReadingTime }} minute
+      {{ end }}
+    </span>
+
+    <!-- <hr style="margin-top: 0em; margin-bottom: 1em;"> -->
+  </div>
+{{ end }}

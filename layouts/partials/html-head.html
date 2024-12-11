@@ -1,0 +1,61 @@
+<head>
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Elad Gariany" />
+
+  <!-- title -->
+  {{- if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <meta name="og:description" content="{{ .Site.Params.description }}" />
+  {{- else -}}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ default .Summary .Description }}" />
+    <meta name="og:description" content="{{ default .Summary .Description }}" />
+  {{- end }}
+
+  <!-- favicon -->
+  {{ if .Site.Params.favicon }}
+    <link rel="shortcut icon" href="{{ .Site.Params.favicon }}" type="image/x-png" />
+  {{ end }}
+
+  {{ partial "seo" . }}
+
+  {{ partial "facebook-meta" . }}
+  {{ partial "twitter-meta" . }}
+
+  <link rel="stylesheet" href="{{ "css/flexboxgrid.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/left_sidebar.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/right_sidebar.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/homepage.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/responsive.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+  <link href="{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--
+    I capture anonymous analytics to understand what kind of traffic is going on on my site.
+    Fathom - simple website analytics - https://github.com/usefathom/fathom
+  -->
+  <script>
+    (function(f, a, t, h, o, m){a[h]=a[h]||function(){(a[h].q=a[h].q||[]).push(arguments)};
+  o=f.createElement('script'),
+  m=f.getElementsByTagName('script')[0];
+  o.async=1; o.src=t; o.id='fathom-script';
+  m.parentNode.insertBefore(o,m)
+})(document, window, 'https://a.gariany.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'EKUOW');
+if ( document.location.hostname != "localhost") {
+  fathom('trackPageview');
+}
+  </script>
+
+  <script async defer data-domain="gariany.com" src="https://plausible.io/js/plausible.js"></script>
+
+</head>

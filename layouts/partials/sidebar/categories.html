@@ -1,0 +1,9 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<div class="row">
+  {{ range $key, $value := .Site.Taxonomies.categories }}
+    <div class="col-xs-12">
+      <li><a style="text-transform: capitalize;" href="{{ $baseUrl }}categories/{{ $key | urlize  }}">/{{ $key | humanize | lower}}</a></li>
+    </div>
+  {{ end }}
+</div>

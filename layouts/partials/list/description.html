@@ -1,0 +1,11 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<span class="posts-list-item-description">
+  Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
+
+  posted under:
+
+    {{ range $key, $value := .Params.tags }}
+      <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ . }}">#{{ $value }}</a>
+    {{ end }}
+</span>

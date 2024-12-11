@@ -1,0 +1,28 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<li class="posts-list-item">
+
+  <div>
+
+    >
+
+  <!--
+    if page have 'external_url' set, it is a link to some other site...
+  -->
+  {{ if (isset .Params "external_url")}}
+    <a href="{{ .Params.external_url }}" target="_blank">{{ .Title }}
+    {{ partial "icons/external_url_icon.html" }}</a>
+  {{ else }}
+
+  <!--
+    if not, it's a page on this site.
+  -->
+    <a href="{{ .Permalink }}index.html">{{ .Title }}</a>
+  {{ end }}
+  </div>
+
+  <div>
+    {{ partial "list/description.html" . }}
+  </div>
+
+</li>

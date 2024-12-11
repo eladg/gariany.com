@@ -1,0 +1,16 @@
+<article>
+
+  {{ partial "homepage/bio.html" . }}
+
+  {{ range .Data.Pages }}
+
+    <!-- ... list posts, not static pages ... -->
+    {{ if eq .Type "posts"}}
+
+      {{ partial "homepage/list.html" . }}
+
+    {{ end }}
+
+  {{ end }}
+
+</article>

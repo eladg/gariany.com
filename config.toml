@@ -1,0 +1,23 @@
+title = "Gariany.com"
+enableRobotsTXT = true
+
+baseURL = "https://www.gariany.com/"
+# BaseURL = "http://localhost:8001/"
+
+[params]
+  #Favicon for site
+  favicon = "/favicon.ico"
+  talkyardServerUrl = "https://comments-for-www-gariany-com.talkyard.net"
+  # talkyardScriptUrl = "/js/talkyard-comments.min.js"
+  talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "AMP", "RSS"]
+  page = ["HTML"]

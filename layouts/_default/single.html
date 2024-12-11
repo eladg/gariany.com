@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+  <article class="post">
+    <div class="card">
+      <div class="card-body">
+
+        {{ partial "article/header.html" . }}
+
+        <div class="post-content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+
+    {{ if isset .Params "dont_show_comments" }}
+    {{ else }}
+      {{ partial "article/comments.html" . }}
+    {{ end }}
+
+  </article>
+
+{{ end }}

@@ -1,0 +1,25 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<div class="sidebar_bio">
+
+  <!-- avatar -->
+
+  {{ if and (not .IsHome) (ne .Title "About") }}
+
+  <div class="row center-xs">
+    <a href="{{ $baseUrl }}">
+      <img class="sidebar_bio_image" src="{{ $baseUrl }}img/avatar.png" alt="Avatar">
+    </a>
+  </div>
+
+  <div class="row center-xs">
+    <span style="font-size: 32px;">Elad Gariany</span>
+  </div>
+
+  <div class="row">
+    <p class="center-xs" style="font-size: 14px; margin-top: 0;">
+        Artist, entrepreneur, and software engineer based in the San Francisco Bay Area.
+  </div>
+
+  {{ end }}
+</div>
