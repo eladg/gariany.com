@@ -1,0 +1,53 @@
+---
+title: "WebArt: 4 Walls In San Francisco (Vector Synthesis)"
+date: 2015-09-25T13:53:31-07:00
+categories: ["code"]
+tags: ["fun", "visuals"]
+discussionId: "sf-confusion-vector-synthesis"
+dont_show_comments: true
+---
+
+</!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elad Gariany - WebGL Audio Joystick (example)</title>
+  <link rel="stylesheet" media="all" type="text/css" href='css/style.css'/>
+</head>
+<body>
+  <div id="fallback" class="fallback"></div>
+  <div id="log-panel" style="display:none;">
+    <span id="log-message"></span>
+  </div>
+
+  <div id="container">
+    <div class='title fullscreen' style='display:none'>
+      <a href='#' class='fullscreen'></a>
+    </div>
+
+    <div class='canvas-container'>
+      <canvas id='canvas'></canvas>
+    </div>
+  </div>
+
+  <div id="control">
+    <a href='#' class='fullscreen'>Fullscreen</a>
+    <a href="#" onclick="mute()">Mute</a>
+  </div>
+</body>
+
+<script src="js/bowser.min.js"></script>
+<script src="js/helios-audio-mixer.js"></script>
+<script src='js/PhiloGL.js'></script>
+<script>
+  if (!PhiloGL.hasWebGL() || !PhiloGL.hasExtension('OES_texture_float')) {
+    document.body.className = 'no-webgl';
+    document.getElementById('fallback').innerHTML = ''
+    +  '<div style="margin:10px;">'
+    +  'Your browser (or hardware) does not support WebGL (or floating point textures). Go <a href="http://get.webgl.org">here</a> to find more information.'
+    +  '</div>'
+  }
+</script>
+
+<script src='js/fluid.js'></script>
+<script src="js/audio.js"></script>

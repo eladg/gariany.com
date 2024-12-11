@@ -4,8 +4,7 @@ Elad's cyber real estate, projects portfolio and memories.
 
 ## Local git lfs Setup:
 
-* current lfs server is [deployed here](https://ac1oitsl90.execute-api.us-west-1.amazonaws.com/) using [this solution](https://github.com/troyready/git-lfs-s3).
-* git pull/push to load media files into local development
+* This repo is using github's builtin LFS support.
 
 ## Deployment
 
