@@ -1,7 +1,7 @@
 {{ $baseUrl := .Site.BaseURL }}
 
 <div>
-  <div class="col-xs" style="display: flex;justify-content: center;flex-wrap: wrap;">
+  <div style="display: flex;justify-content: center;flex-wrap: wrap;">
       {{ range .Data.Pages.GroupByDate "2006" -}}
       
       <ul class="posts-list">
