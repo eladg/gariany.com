@@ -1,12 +1,10 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div class="row">
+<div>
   <div class="col-xs" style="display: flex;justify-content: center;flex-wrap: wrap;">
       {{ range .Data.Pages.GroupByDate "2006" -}}
+      
       <ul class="posts-list">
-
-        <!-- the year -->
-        <div class="posts-title site-date-catalog">{{ .Key }}</div>
 
           {{ range .Pages }}
 
