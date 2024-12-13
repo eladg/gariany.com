@@ -20,3 +20,15 @@ More posts:
 [/videos](/categories/video/)
 [/code](/categories/code/)
 [/music](/categories/music/)
+
+
+Praying for peace in the middle east ✌️🕊
+
+
+
+
+
+.   
+    
+    
+amen.

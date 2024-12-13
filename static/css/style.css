@@ -481,7 +481,11 @@ iframe {
 @media screen and (max-width: 1020px) {
 
   article {
-    padding-top: 3em;
+    padding-top: 1em;
+  }
+
+  .content-container {
+    background-image: none;
   }
 
   .site-body {
@@ -489,7 +493,6 @@ iframe {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 10px;
   }
 
   .bio-top {
@@ -580,11 +583,5 @@ iframe {
     font-size: 30px;
     padding: 0 0 30px;
 
-  }
-}
-
-@supports not (-webkit-background-clip: text) {
-  .content-container {
-    background-image: none;
   }
 }
