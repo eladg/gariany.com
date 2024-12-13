@@ -317,6 +317,13 @@ iframe {
   justify-content: space-evenly;
 }
 
+.sidebar-bio-image {
+  width: 45%;
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 50%;
+}
+
 .sidebar-bio-name {
   font-size: 42px;
   font-weight: 400;
@@ -341,29 +348,6 @@ iframe {
   flex-direction: column;
   padding: 4em 1em 4em 1em;
   color: var(--color-text-secondary);
-}
-
-.sidebar-bio-image {
-  width: 45%;
-  border-color: #ffffff;
-  border-style: solid;
-  border-radius: 50%;
-}
-
-.sidebar-hide {
-  opacity: 0.6;
-}
-
-.sidebar-btn a {
-  font-size: 28px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.sidebar-btn a:hover,
-.sidebar-btn a:focus {
-  color: #e82626;
-  text-decoration: none;
 }
 
 .tags-list ul {
@@ -534,6 +518,12 @@ iframe {
     width: 100%;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    /* disable user selection when clicking on the menu button */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   .sidebar-navigation ul.show {
@@ -551,10 +541,16 @@ iframe {
 
   .sidebar-navigation.active::before {
     content: '×';
+    padding-left: 15px;
   }
 
   .sidebar-navigation.active ul {
     display: flex;
+    position: fixed;
+    margin-left: 2em;
+    width: 200px;
+    transition: opacity 0.3s;
+    opacity: 1;
   }
   
   .sidebar-bio {
@@ -584,5 +580,11 @@ iframe {
     font-size: 30px;
     padding: 0 0 30px;
 
+  }
+}
+
+@supports not (-webkit-background-clip: text) {
+  .content-container {
+    background-image: none;
   }
 }
