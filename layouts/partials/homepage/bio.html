@@ -1,24 +1,15 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div>
-  <div class="row bio-space">
-    <div>
-      <a href="{{ $baseUrl }}/about"><img class="avatar" src="{{ $baseUrl }}img/avatar.png" alt="Avatar"></a>
+<div class="bio-container">    
+  <div class="bio-top">
+    <a href="{{ $baseUrl }}about">
+      <img class="avatar" src="{{ $baseUrl }}img/avatar.png" alt="Avatar">
+    </a>
+    <div class="bio-description">
+      <p>Welcome to <b>Elad Gariany</b>'s undermaintained website and blog. <br><br>I'm a software engineer, musician and entrepreneur. I create every day and use this space to share some of my works, but mostly I use it to capture some of my best life memories and learnings.</p>
     </div>
+  </div>
 
-    <div class="bio-space">
-      <div>
-        <div class="bio_title">
-          <span>Elad Gariany</span>
-        </div>
-      </div>
-      <div>
-        <div class="bio_description">
-          <p>I'm an artist and a coder. I create every day and use this space to share some of my works. My current side-projects are <a href="https://www.digitalgoods.app" target="_blank">digitalgoods.app</a> and <a href="https://www.sound.camp">SOUND:CAMP</a>. Hire me as a full-stack devloper, solution architect or a Shopify Expert. Read more about me on the <a href="/about" target="_blank">About Me</a> section.</p>
-        </div>
-      </div>
-
-      {{ partial "homepage/projects.html" . }}
-    </div>
+  <div class="bio-projects">
   </div>
 </div>
