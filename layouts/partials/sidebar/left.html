@@ -1,5 +1,16 @@
 {{ $baseUrl := .Site.BaseURL }}
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const nav = document.querySelector('.sidebar-navigation');
+  nav.addEventListener('click', function(e) {
+    if (e.target === nav) {
+      this.classList.toggle('active');
+    }
+  });
+});
+s</script>
+
 {{ if (not .IsHome) }}
 <div class="sidebar-bio">
   <!-- avatar -->

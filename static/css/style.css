@@ -58,7 +58,6 @@ h4 {
 p, ul, li, a {
   margin: 0;
   font-size: 21px;
-  padding-inline-start: 0;
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
@@ -112,36 +111,11 @@ hr {
 }
 
 .content-container {
+  background-image: url('/img/cover.png');
+  background-color: #f1f1f1;
+  background-blend-mode: lighten;
   height: 100vh;
   overflow-y: scroll;
-}
-
-.projects-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  flex-wrap: wrap;
-}
-
-.projects-wrapper a {
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-wrapper img {
-  width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.projects-wrapper img:hover {
-  transform: scale(1.05);
 }
 
 article {
@@ -152,7 +126,6 @@ article {
   margin-left: 4em;
   margin-top: 3em;
   margin-bottom: 9em;
-  background-color: var(--color-background-light);
 }
 
 .header {
@@ -258,10 +231,6 @@ a:focus {
   text-decoration: underline;
 }
 
-article a {
-  color: #000;
-}
-
 .avatar {
   border-radius: 50%;
   border-width: 3px;
@@ -316,6 +285,7 @@ iframe {
   display: flex;
   flex-direction: column;
   list-style: none;
+  padding-inline-start: 0;
 }
 
 
@@ -330,8 +300,14 @@ iframe {
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s ease-in;
   position: relative;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.sidebar-navigation ul li a:hover {
+  transform: translateX(2px);
+  color: #e82626;
 }
 
 .sidebar-bio-wrapper {
@@ -346,7 +322,7 @@ iframe {
   font-weight: 400;
   color: var(--color-text-white);
   text-align: center;
-  text-justify: center;
+  letter-spacing: 4px;
 }
 
 .sidebar-bio-description {
@@ -543,17 +519,44 @@ iframe {
 
   .sidebar-container {
     width: 100%;
+    z-index: 10;
   }
 
   .sidebar-navigation {
     margin-top: 0;
+    display: flex;
+    justify-content: start;
   }
 
   .sidebar-navigation ul {
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: none;
+    background-color: #111111;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
 
+  .sidebar-navigation ul.show {
+    display: flex;
+  }
+
+  .sidebar-navigation::before {
+    content: '☰';
+    display: block;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .sidebar-navigation.active::before {
+    content: '×';
+  }
+
+  .sidebar-navigation.active ul {
+    display: flex;
+  }
+  
   .sidebar-bio {
     display: none;
   }
