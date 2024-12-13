@@ -1,6 +1,6 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-{{ if and (not .IsHome) (ne .Title "About") }}
+{{ if (not .IsHome) }}
 <div class="sidebar-bio">
   <!-- avatar -->
   <div class="sidebar-bio-wrapper">
@@ -17,6 +17,7 @@
 <div class="sidebar-navigation">
   <!-- desktop menu -->
   <ul>
+    <li><a href='/'><span>Home</span></a></li>
     <li><a href='/about'><span>About</span></a></li>
     <li><a href='/categories'><span>Posts</span></a></li>
     <li class='last'><a href='mailto:elad@eladgariany.com'><span>Email Me</span></a>

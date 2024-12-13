@@ -12,7 +12,7 @@
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 100%;
 }
 
@@ -662,6 +662,13 @@ iframe {
     padding-top: 7em;
   }
 
+  .site-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+
   .bio-container {
     padding-right: 0em;
     padding-left: 0em;
@@ -676,7 +683,7 @@ iframe {
     z-index: 2;
   }
 
-  .sidebar-right {
+  .sidebar-bio {
     display: none;
   }
 
@@ -722,18 +729,13 @@ iframe {
   .sidebar-navigation {
     margin: 0!important;
   }
-  .card__image {
-    width: 72px!important;
-  }
   .sidebar-navigation > ul > li:last-child > a {
     border-bottom: none!important;
   }
   .sidebar-navigation {
     text-align: right;
   }
-  .card__image-container {
-    justify-content: left!important;
-  }
+
   .sidebar-navigation ul ul li:hover > a, .sidebar-navigation ul ul li.open > a, .sidebar-navigation ul ul li.active > a {
     text-align: center;
   }
