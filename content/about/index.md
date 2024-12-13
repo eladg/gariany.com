@@ -8,15 +8,27 @@ is_site_static_page: true
 
 ## About
 
-Elad Gariany, is an international entrepreneur, artist, writer and a software engineer. Currently based in the San Francisco Bay Area and works as an Solution architect, Tech Lead Full Stack Engineer, music composer and event organizer.
+Hi there! I'm Elad Gariany (pronounced El-lAd Gari-ya-ni), born and raised in the greater Tel Aviv area in the late 80's. I am a software engineer, entrepreneur and a solution architect with 15+ years of experience, focusing mainly on SaaS in audio/video, streaming and cloud services. I thrive on connecting with people and driving projects forward.
 
-I'm always looking for new projects, collaborations or friendly conversation. Feel free to reach out to: elad@gariany.com
+Among my hobbies is hiking with my dogs, playing piano and improvisational composition of music production (basically, jamming with machines).
 
-Please checkout my [Professional CV](/about/elad.gariany.cv.pdf) or my [Artist CV](/about/elad.gariany.art_cv.pdf).
+You can find me on [LinkedIn](https://www.linkedin.com/in/eladgariany/) or checkout my CV [here](/about/elad.gariany.cv.pdf).
 
-{{< figure src="about/elad.jpg" title="">}}
+Please feel free to reach out to me at elad@gariany.com
 
-See posts under:
+More posts:
+[/videos](/categories/video/)
 [/code](/categories/code/)
 [/music](/categories/music/)
-[/writings](/categories/writings/)
+
+
+Praying for peace in the middle east ✌️🕊
+
+
+
+
+
+.   
+    
+    
+amen.

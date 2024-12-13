@@ -1,22 +1,43 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-{{ partial "sidebar/background.html" . }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const nav = document.querySelector('.sidebar-navigation');
+  nav.addEventListener('click', function(e) {
+    if (e.target === nav) {
+      this.classList.toggle('active');
+    }
+  });
+});
+s</script>
 
-<div class="sidebar_pad">
-  {{- partial "sidebar/bio.html" . -}}
-
-  <div class="sidebar_navigation">
-    {{ partial "sidebar/navigation_mobile.html" . }}
-    {{ partial "sidebar/navigation_desktop.html" . }}
+{{ if (not .IsHome) }}
+<div class="sidebar-bio">
+  <!-- avatar -->
+  <div class="sidebar-bio-wrapper">
+    <img class="sidebar-bio-image" src="{{ $baseUrl }}img/avatar.png" alt="Avatar" onclick="window.location.href='{{ $baseUrl }}'" style="cursor: pointer;">
   </div>
+  <span class="sidebar-bio-name">Elad Gariany</span>
 
-  <div class="bottom-xs">
-    <div class="row center-xs">
-      {{ partial "sidebar/tags.html" . }}
-    </div>
-
-    <div class="row center-xs">
-      {{ partial "sidebar/social.html" . }}
-    </div>
+  <div class="sidebar-bio-description">
+    <span>software engineer | musician | entrepreneur</span>
   </div>
+</div>
+{{ end }}
+    
+<div class="sidebar-navigation">
+  <ul>
+    <li><a href='/'><span>Home</span></a></li>
+    <li><a href='/about'><span>About</span></a></li>
+    <li><a href='/categories'><span>Posts</span></a></li>
+    <li class='last'><a href='mailto:elad@eladgariany.com'><span>Email Me</span></a>
+  </ul>  
+</div>
+
+<div class="sidebar-tags">
+  {{ partial "sidebar/tags.html" . }}
+</div>
+
+<div class="sidebar-social">
+  {{ partial "sidebar/social.html" . }}
 </div>

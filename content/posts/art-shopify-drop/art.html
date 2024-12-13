@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>elad gariany - shopify</title>
+
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+</head>
+<body>
+  <div id="container" class="container">
+    <div class="animation">
+      <ul id="scene" class="scene">
+        <li class="layer wall" data-depth="0.0"></li>
+        <li class="layer lady" data-depth="0.4"><img src="img/lady.png"></li>
+        <li class="layer cart" data-depth="0.8"><img src="img/cart.png"></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/parallax.js"></script>
+  <script type="text/javascript">
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+  </script>
+</body>
+</html>

@@ -19,7 +19,7 @@ echo "==========================================================================
 # more info: https://github.com/bep/s3deploy
 
 export AWS_SDK_LOAD_CONFIG=1
-/usr/local/bin/s3deploy -source ../public -bucket gariany.com -region us-east-1 -distribution-id E1OEXPS7LRFGE -public-access -v
+s3deploy -source ../public -bucket gariany.com -region us-east-1 -distribution-id E1OEXPS7LRFGE -public-access -v
 
 echo "================================================================================"
 echo ""
