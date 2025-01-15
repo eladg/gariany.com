@@ -12,7 +12,7 @@ Hi there! I'm Elad Gariany (pronounced El-lAd Gari-ya-ni), born and raised in th
 
 Among my hobbies is hiking with my dogs, playing piano and improvisational composition of music production (basically, jamming with machines).
 
-You can find me on [LinkedIn](https://www.linkedin.com/in/eladgariany/) or checkout my CV [here](/about/elad.gariany.cv.pdf).
+You can find me on [LinkedIn](https://www.linkedin.com/in/eladgariany/) or checkout my [Software Engineer CV](/about/Elad.Gariany-SoftwareEngineer.2025.pdf) or my [Engineering Managment CV](/about/Elad.Gariany-EngineeringManagement.2025.pdf) (updated on early 2025).
 
 Please feel free to reach out to me at elad@gariany.com
 
@@ -28,7 +28,7 @@ Praying for peace in the middle east ✌️🕊
 
 
 
-.   
-    
+__   
+
     
 amen.
