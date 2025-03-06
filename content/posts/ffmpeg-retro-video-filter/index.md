@@ -1,5 +1,5 @@
 ---
-title: "FFmpeg: Step-by-Step Retro Video Filter"
+title: "FFmpeg: A Step-by-Step Guide to Creating a Retro Video Filter"
 date: 2020-08-19T15:59:02-07:00
 categories: ["code"]
 tags: ["ffmpeg", "gist", "video-tech"]
