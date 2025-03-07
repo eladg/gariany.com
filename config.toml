@@ -2,7 +2,6 @@ title = "Gariany.com"
 enableRobotsTXT = true
 
 baseURL = "https://www.gariany.com/"
-# BaseURL = "http://localhost:8001/"
 
 [params]
   #Favicon for site
