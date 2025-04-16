@@ -9,6 +9,15 @@ baseURL = "https://www.gariany.com/"
   talkyardServerUrl = "https://comments-for-www-gariany-com.talkyard.net"
   # talkyardScriptUrl = "/js/talkyard-comments.min.js"
   talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+  # SEO parameters
+  description = "Personal blog and portfolio of Elad Gariany"
+  keywords = ["blog", "technology", "programming", "web development"]
+  author = "Elad Gariany"
+  language = "en"
+  googleSiteVerification = "" # Add your Google Search Console verification code
+  # Social media
+  twitter = "@elad_g" # Replace with your Twitter handle
+  github = "eladg" # Replace with your GitHub username
 
 [permalinks]
   posts = "/:year/:month/:title/"

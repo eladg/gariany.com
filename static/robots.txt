@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /index.xml
+Allow: /categories/
+Allow: /tags/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /draft/
+
+# Sitemap location
+Sitemap: https://www.gariany.com/sitemap.xml 
