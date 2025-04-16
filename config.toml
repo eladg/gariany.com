@@ -2,6 +2,7 @@ title = "Gariany.com"
 enableRobotsTXT = true
 
 baseURL = "https://www.gariany.com/"
+ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   #Favicon for site
